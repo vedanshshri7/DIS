@@ -1,0 +1,49 @@
+.form-container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.complaint-form {
+  display: flex;
+  flex-direction: column; /* Keep the form items stacked vertically */
+}
+
+.form-row {
+  display: flex; /* Use flexbox for horizontal layout */
+  align-items: center;
+  margin-bottom: 15px; /* Add space between rows */
+}
+
+.form-row label {
+  width: 150px; /* Fixed width for labels */
+  margin-right: 10px; /* Space between label and input */
+}
+
+input[type="text"],
+textarea,
+select {
+  flex: 1; /* Allow inputs to fill the remaining space */
+  padding: 10px; /* Add padding for better touch targets */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}

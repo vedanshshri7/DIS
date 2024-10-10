@@ -1,0 +1,79 @@
+/* Styles for the navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  margin-right: 20px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  background-color: #343a40; /* Match the navbar background */
+  color: white; /* Button text color */
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+}
+
+.dropdown-content {
+  display: none; /* Hidden by default */
+  position: absolute;
+  background-color: #f8f9fa; /* Light background color */
+  min-width: 160px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 4px; /* Optional: adds rounded corners */
+}
+
+.dropdown-content a {
+  color: black; /* Changed text color to black */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.dropdown-content a:hover {
+  background-color: #e2e6ea; /* Light gray background on hover */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Show the dropdown on hover */
+}
+
+.dropdown-btn:hover {
+  background-color: #555; /* Darker shade on button hover */
+}

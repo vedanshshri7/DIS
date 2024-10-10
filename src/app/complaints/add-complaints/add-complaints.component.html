@@ -1,0 +1,31 @@
+<div class="form-container">
+  <form (ngSubmit)="addComplaint()" class="complaint-form">
+    <div class="form-row">
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="name" name="name" required placeholder="Your Name" />
+    </div>
+
+    <div class="form-row">
+      <label for="title">Title:</label>
+      <input type="text" id="title" [(ngModel)]="title" name="title" required placeholder="Complaint Title" />
+    </div>
+
+    <div class="form-row">
+      <label for="description">Description:</label>
+      <textarea id="description" [(ngModel)]="description" name="description" required placeholder="Describe your complaint"></textarea>
+    </div>
+
+    <div class="form-row">
+      <label for="type">Type of Complaint:</label>
+      <select id="type" [(ngModel)]="type" name="type" required>
+        <option value="" disabled selected>Select Type</option>
+        <option value="academic">Academic</option>
+        <option value="facility">Facility</option>
+        <option value="behavioral">Behavioral</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <button type="submit" class="submit-button">Submit Complaint</button>
+  </form>
+</div>

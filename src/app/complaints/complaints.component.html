@@ -1,0 +1,26 @@
+<div class="complaints-container">
+  <app-side-nav></app-side-nav>
+
+  <div class="complaints-body">
+    <h2>Complaints List</h2>
+    <div *ngFor="let complaint of complaints; let i = index" class="complaint-item">
+      <div>
+        <strong>{{ complaint.name }}</strong>: {{ complaint.title }} - {{ complaint.description }}
+      </div>
+      <button class="delete-button" (click)="deleteComplaint(i)">Delete</button>
+    </div>
+  </div>
+
+  <button class="btn btn-primary add-complaint-button" (click)="openAddComplaintModal()">
+    + Add Complaint
+  </button>
+
+  <!-- Modal for adding complaints -->
+  <div id="addComplaintModal" class="modal" [ngStyle]="{'display': isModalOpen ? 'block' : 'none'}">
+    <div class="modal-content">
+      <span class="close" (click)="closeAddComplaintModal()">&times;</span>
+      <h2>Add Complaint</h2>
+      <app-add-complaints (complaintAdded)="onComplaintAdded($event)"></app-add-complaints>
+    </div>
+  </div>
+</div>
